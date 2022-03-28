@@ -37,8 +37,8 @@ jobs:
     - name: Increment Version
       run: |
         mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.nextIncrementalVersion} versions:commit
-        git config user.name my-bot-user
-        git config user.email my-bot-user@email.com
+        git config user.name nisarg9099
+        git config user.email nisarg9099@email.com
         find . -name 'pom.xml' | xargs git add
         git commit -m "updated version in pom.xml"
         git push
