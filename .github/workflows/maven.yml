@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-  if: "!contains(github.event.head_commit.author.name, '${{ secrets.GIT_USER }}')"
+    if: "!contains(github.event.head_commit.author.name, '${{ secrets.GIT_USER }}')"
 
     runs-on: ubuntu-latest
 
