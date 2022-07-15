@@ -6,7 +6,7 @@
 
   <groupId>org.thedevnisarg</groupId>
   <artifactId>parent-proj</artifactId>
-  <version>1.0.16</version>
+  <version>1.0.17</version>
 
   <name>parent-proj</name>
   <!-- FIXME change it to the project's website -->
