@@ -8,13 +8,14 @@ on:
     branches: 
       - main
       - dev1
+    paths-ignore:
+      - 'pom.xml'
 
 jobs:
   build:
     if: "!contains(github.event.head_commit.author.name, 'thedevnisarg')"
 
     runs-on: ubuntu-latest
-
 
     steps:
     - uses: actions/checkout@v2
