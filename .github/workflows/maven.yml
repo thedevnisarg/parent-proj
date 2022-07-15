@@ -44,7 +44,7 @@ jobs:
         GIT_USER: ${{ secrets.GIT_USER }}
         GIT_PASSWORD: ${{ secrets.GIT_TOKEN }}
       run: |
-        git config --local credential.helper "!f() { echo username=\\$GIT_USER; echo password=\\$GIT_PASSWORD; }; f"
+        #git config --local credential.helper "!f() { echo username=\\$GIT_USER; echo password=\\$GIT_PASSWORD; }; f"
         mvn build-helper:parse-version versions:set -DnewVersion=\${parsedVersion.majorVersion}.\${parsedVersion.minorVersion}.\${parsedVersion.nextIncrementalVersion} versions:commit
         git config --global user.name "${{ secrets.GIT_USER }}"
         git config --global user.email "${{ secrets.GIT_EMAIL }}"
